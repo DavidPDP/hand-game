@@ -3,6 +3,7 @@
 # they're created statically, but the code allows the extension to 
 # make them lazy objects with expiration time for variants that aren't by default.
 from .repository import get_game_variant_multimedia, get_game_variant_rules
+import asyncio
 
 class GameVariant:
     """
@@ -21,7 +22,7 @@ class GameVariant:
     def multimedia(self):
         return self.multimedia
 
-    def check_winner(self,player1_move: str,player2_move: str) -> str:
+    async def check_winner(self,player1_move: str,player2_move: str) -> str:
         """
         Verifies who has the winning movement, according to 
         the rules of the game variant.
