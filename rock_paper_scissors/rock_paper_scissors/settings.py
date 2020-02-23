@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rules_manager',
+    'rules_gestor',
 ]
 
 MIDDLEWARE = [
@@ -76,8 +76,15 @@ WSGI_APPLICATION = 'rock_paper_scissors.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dbeudd4jbamgt7',
+        'USER': 'euvgvmirczxhpt',
+        'PASSWORD': 'c8b8a358ade258aa06753d061b7f22f32239dc4884cfa3c83f574a0da115f6fd',
+        'HOST': 'ec2-3-234-109-123.compute-1.amazonaws.com',
+        'PORT': 5432,
+        'OPTIONS': {
+            'options': '-c search_path=hand_game'
+        }
     }
 }
 
