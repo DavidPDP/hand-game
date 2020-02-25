@@ -36,7 +36,6 @@ def get_game_variant_rules(mode: str) -> dict:
     moves_urls = moves_query.values('winner__name','loser__name')
 
     # Create Dict object (business object)
-    rules_dict = {rule['winner__name'] + '-' + rule['loser__name']:True for rule in moves_urls}
-
+    rules_dict = {'%s-%s' %(rule['winner__name'],rule['loser__name']):True for rule in moves_urls}
     return rules_dict
     

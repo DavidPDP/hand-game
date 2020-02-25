@@ -1,3 +1,9 @@
+# The DTO pattern doesn't have much utility and meaning 
+# in not distributed applications. In this particular case, 
+# this pattern is used to meet with open-close principle. 
+# Therefore, encapsulating the necessary information for 
+# transmission between subsystems is key to cohesion and 
+# elasticity of the system.
 from marshmallow import Schema, fields
 
 class OutputMovesMultimediaDTO(Schema):

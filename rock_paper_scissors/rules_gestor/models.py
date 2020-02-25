@@ -1,3 +1,6 @@
+# For more information consult the data model documentation. 
+# The model creation is isolated from the framework, this allows 
+# decoupling the cohesion between the persistence layer and the business layer.
 from django.db import models
 
 class Modes(models.Model):

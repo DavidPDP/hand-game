@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rules_gestor',
+    'match_gestor',
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -51,6 +53,14 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'rock_paper_scissors.urls'
+ASGI_APPLICATION = "rock_paper_scissors.routing.application"
+
+CHANNEL_LAYERS={
+    "default":{
+        "BACKEND":"channels.layers.InMemoryChannelLayer"
+    }
+}
+
 
 TEMPLATES = [
     {
