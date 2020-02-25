@@ -6,9 +6,6 @@ import {
   Route
 } from "react-router-dom";
 
-import Cookies from 'universal-cookie';
-import uuid from 'uuid'
-
 function App() {
   return (
     <Router>
@@ -25,9 +22,3 @@ function App() {
 }
 
 export default App;
-
-//Cookies Management
-const cookies = new Cookies();
-if (typeof cookies.get('player_id') === 'undefined') {
-  cookies.set('player_id', uuid.v4(), { path: '/' });
-}

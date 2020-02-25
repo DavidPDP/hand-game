@@ -31,14 +31,12 @@ class GameVariant:
         winner = ''
         move_tuple = '%s-%s' % (player1_move,player2_move)
         
-        try:
-            if self.rules[move_tuple] == True:
-                winner = 'Player1'
-            else:
-                winner = 'Player2'
-            return winner 
-        except KeyError as exception:
-            raise Exception('This move does not exist in this game variant') 
+        if move_tuple in self.rules:
+            winner = 'Player 1'
+        else:
+            winner = 'Player 2'
+            
+        return winner
 
 # init default games variant
 games_variant = {}
