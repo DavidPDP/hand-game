@@ -11,8 +11,8 @@
       "chatbot",
       "websockets"
     ],
-    "website": "https://github.com/DavidPDP/hand-game.git",
-    "repository": "https://github.com/DavidPDP/hand-game/",
+    "website": "https://github.com/DavidPDP/hand-game/tree/develop/",
+    "repository": "https://github.com/DavidPDP/hand-game/tree/develop/",
     "env": {
       "DJANGO_SECRET_KEY": {
         "description": "A secret key for a particular Django installation.",
