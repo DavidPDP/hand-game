@@ -96,7 +96,6 @@ def get_match(id: uuid) -> Match:
 def create_match(player1: Player, game_type: str) -> str:
     new_match = macth_factory.create_match(player1=player1,game_type=game_type)
     matches[new_match.id] = new_match
-    print(matches)
     return str(new_match.id)
 
 def join_match(player2: Player, match: Match):

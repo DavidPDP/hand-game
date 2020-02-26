@@ -30,7 +30,6 @@ class Sender extends React.Component {
         
         this.connection.onmessage = evt => { 
             var message = JSON.parse(evt.data);
-            console.log(message)
             if(message.type === 'create_match'){
                 match_info.game_mode_visible = false;
                 match_info.match_id = message.match_id;

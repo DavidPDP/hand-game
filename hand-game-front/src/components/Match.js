@@ -21,11 +21,11 @@ class Match extends React.Component {
     render(){
         return(
             <div>
-                <img alt='mode' src={this.props.multimedia.url} width="100" height="100"/>
-                {this.props.finish ? (<p>{this.props.winner + 'Winner'}</p>):(null) }
+                <img alt='mode' src={this.props.multimedia.url} width="300" height="350"/><br/><br/>
+                {this.props.finish ? (<p>{this.props.winner + ' Winner'}</p>):(<br/>) }
                 {this.props.multimedia.moves.map((move, i) => 
                 <a key={i} href='/' onClick={e => this.sendMove(e,move.move)}>
-                    <img alt={move.move} src={move.url + ""} width="100" height="100"/>
+                    <img alt={move.move} src={move.url + ""} width="150" height="150"/>
                 </a>)}
             </div>
         );
